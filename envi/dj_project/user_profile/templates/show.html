@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+  {% block title %} Home {% endblock %}
+  {% block head %}
+  {% endblock head %}
+  
+{% block content %}
+    <div class="content-section">
+        <div class="media">
+            <img width="200" height="200" class="rounded-circle account-img" src="{{ user.profile.image.url }} "
+            <div class="media-body">
+                <h2 class="account-heading"> Welcome {{user.username}} !</h2>
+                <p class="text-secondary">Address : {{ user.profile.address }}</p>
+                <p class="text-secondary">City: {{ user.profile.city }}</p>
+                <p class="text-secondary">Phone : {{ user.profile.phone }}</p>
+            </div>
+        </div>
+
+    </div>    
+{% endblock content %}

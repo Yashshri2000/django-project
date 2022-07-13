@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+  {% block head %}
+    <style>
+        {% comment %} .container-fluid{
+            background-color: blue;
+
+        }
+        .col-sm-4{
+            background-color: grey;
+           
+        }
+        .col-sm-8{
+            background-color: grey;
+            
+        }  {% endcomment %}
+    </style>
+{% endblock head %}
+  {% block content %}
+  {% comment %} <div class="row"> {% endcomment %}
+      {% comment %} <div class="col-sm-12 mb-3">
+          <h4 class="text-center"> Welcome {{ user.username }} </h4>
+      </div> {% endcomment %}
+    <div>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand"> Welcome {{user.username}} !</a>
+          <form class="d-flex">
+            <button class="btn btn-outline-success" type="submit">LogOut</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div>
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-sm-8">
+                <h3>edit profile</h3>
+               
+                <div class="content-section">
+                    <div class="media">
+                        <img width="200" height="200" class="rounded-circle account-img" src="{{ user.profile.image.url }} ">
+                        <div class="media-body">
+                            <p class="text-secondary">Address : {{ user.profile.address }}</p>
+                            <p class="text-secondary">City: {{ user.profile.city }}</p>
+                            <p class="text-secondary">Phone : {{ user.profile.phone }}</p>
+                        </div>
+                        </div>
+                    </div>
+            
+                </div>    
+               
+                <div class="col-sm-4">
+                    <h3>Column 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                </div>
+             </div>
+            </div>
+        </div>
+    </div>
+
+  {% endblock %}
